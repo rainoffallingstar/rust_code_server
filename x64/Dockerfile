@@ -4,4 +4,7 @@ RUN curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh -s -- -y &&\
     sudo apt autoclean &&\
     sudo apt clean &&\
     sudo rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* &&\
-    R -e "install.packages('pak')"
+    R -e "install.packages('pak')" &&\
+    R -e "pak::pak('rainoffallingstar/cargor')" &&\
+    R -e "pak::pak('rstudio/reticulate')" &&\
+    pip3 install --upgrade pip 
