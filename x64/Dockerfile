@@ -7,5 +7,4 @@ RUN curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh -s -- -y &&\
     sudo rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* &&\
     sudo R -e "install.packages('pak')" &&\
     sudo R -e "pak::pak('rainoffallingstar/cargor')" &&\
-    sudo R -e "pak::pak('rstudio/reticulate')" &&\
-    ~/.cargo/bin/cargo install --git https://github.com/typst/typst --locked typst-cli
+    sudo R -e "pak::pak('rstudio/reticulate')"
